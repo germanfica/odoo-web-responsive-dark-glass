@@ -4,7 +4,7 @@ Optional **Dark Glass** theme for the application menu provided by
 [OCA/web_responsive 18.0](https://github.com/OCA/web/tree/18.0/web_responsive).
 
 It extends the existing Odoo `res.users.apps_menu_theme` selection and adds
-two theme-specific SCSS assets. The OCA menu, preference modal, search
+three theme-specific SCSS assets. The OCA menu, preference modal, search
 components, icons, and SVG are **reused**, not copied or replaced.
 
 ## Requirements
@@ -38,6 +38,9 @@ via Odoo's `ondelete` fallback.
   Odoo's Command Palette only while Dark Glass is selected. Uses the
   persistent OCA menu theme attribute with CSS `:has()` because the dialog
   is mounted outside the apps menu. No JavaScript patch is required.
+- `static/src/scss/navbar.scss`: gives Odoo's main navigation bar a
+  translucent Dark Glass background, bottom border, and blur. Uses CSS
+  `:has()` to scope the override to the selected OCA app-menu theme.
 - Uses `/web_responsive/static/src/img/home-menu-bg-overlay.svg` from the
   **installed** `web_responsive` addon, so the SVG is not redistributed.
 - Gives app icon backgrounds the same translucent glass surface as the menu search bar, without changing tile layout, icon dimensions, rounded corners, or icon assets.
@@ -53,9 +56,9 @@ The radial-gradient values are `#123745`, `#1a142f`, and `#03050d`.
 ## Troubleshooting
 
 - When upgrading an existing installation, rebuild/deploy the addon and
-  upgrade the Odoo module to register the additional backend SCSS asset.
-- The Command Palette theme requires a modern browser with CSS `:has()`
-  support and the OCA apps menu mounted in the navigation bar.
+  upgrade the Odoo module to register the additional backend SCSS assets.
+- The Command Palette and navbar themes require a modern browser with CSS
+  `:has()` support and the OCA apps menu mounted in the navigation bar.
 
 - If Dark Glass is absent from the theme dropdown, update the Apps List and
   verify the addon is installed in the same database as `web_responsive`.
