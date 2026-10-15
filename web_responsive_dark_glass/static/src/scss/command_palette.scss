@@ -1,0 +1,96 @@
+/* Copyright 2026 Contributors
+ * License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
+ *
+ * Dark Glass styling for Odoo 18's Command Palette.
+ * Odoo mounts dialogs outside the OCA apps menu, so inherit the selected
+ * theme through the persistent apps-menu node instead of a parent selector.
+ * No Odoo or OCA templates, services, or JavaScript are replaced.
+ */
+
+body:has(.o_grid_apps_menu[data-theme="dark_glass"]) {
+    .o_technical_modal .o_command_palette {
+        color: #f5f7fc;
+        background-color: rgba(13, 22, 36, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        > .modal-body {
+            background: transparent;
+        }
+
+        .o_command_palette_search {
+            background-color: rgba(255, 255, 255, 0.10);
+            border-bottom-color: rgba(255, 255, 255, 0.22) !important;
+
+            .o_namespace,
+            .form-control,
+            .input-group-text {
+                color: #f5f7fc;
+            }
+
+            .form-control {
+                background: transparent;
+                caret-color: #f5f7fc;
+
+                &::placeholder {
+                    color: rgba(245, 247, 252, 0.70);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .o_command_palette_listbox {
+            .o_command {
+                border-radius: 4px;
+
+                &:hover,
+                &.focused {
+                    background-color: rgba(255, 255, 255, 0.16);
+                    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+                }
+
+                a,
+                .o_command_name {
+                    color: #f5f7fc;
+                }
+
+                .o_command_focus {
+                    color: rgba(245, 247, 252, 0.70) !important;
+                }
+            }
+
+            .o_command_palette_listbox_empty {
+                color: rgba(245, 247, 252, 0.70);
+            }
+        }
+
+        .o_command_palette_footer {
+            background-color: rgba(255, 255, 255, 0.10) !important;
+            border-top-color: rgba(255, 255, 255, 0.22) !important;
+            color: rgba(245, 247, 252, 0.75) !important;
+
+            .text-primary {
+                color: #d4e6ff !important;
+            }
+        }
+
+        .o_command_palette_exit .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.10);
+            border-color: rgba(255, 255, 255, 0.22);
+            color: #f5f7fc;
+
+            &:hover,
+            &:focus-visible {
+                background-color: rgba(255, 255, 255, 0.16);
+            }
+        }
+
+        kbd {
+            color: #f5f7fc;
+            background-color: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+    }
+}

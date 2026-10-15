@@ -16,6 +16,7 @@
     "assets": {
         "web.assets_backend": [
             "web_responsive_dark_glass/static/src/scss/dark_glass.scss",
+            "web_responsive_dark_glass/static/src/scss/command_palette.scss",
         ],
     },
 }

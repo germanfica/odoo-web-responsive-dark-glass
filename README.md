@@ -4,7 +4,7 @@ Optional **Dark Glass** theme for the application menu provided by
 [OCA/web_responsive 18.0](https://github.com/OCA/web/tree/18.0/web_responsive).
 
 It extends the existing Odoo `res.users.apps_menu_theme` selection and adds
-only a theme-specific SCSS asset. The OCA menu, preference modal, search
+two theme-specific SCSS assets. The OCA menu, preference modal, search
 components, icons, and SVG are **reused**, not copied or replaced.
 
 ## Requirements
@@ -34,17 +34,28 @@ via Odoo's `ondelete` fallback.
 - `models/res_users.py`: adds a single `selection_add` entry for `dark_glass`.
 - `static/src/scss/dark_glass.scss`: scoped to
   `.o_grid_apps_menu[data-theme="dark_glass"]`.
+- `static/src/scss/command_palette.scss`: applies translucent styling to
+  Odoo's Command Palette only while Dark Glass is selected. Uses the
+  persistent OCA menu theme attribute with CSS `:has()` because the dialog
+  is mounted outside the apps menu. No JavaScript patch is required.
 - Uses `/web_responsive/static/src/img/home-menu-bg-overlay.svg` from the
   **installed** `web_responsive` addon, so the SVG is not redistributed.
 - Gives app icon backgrounds the same translucent glass surface as the menu search bar, without changing tile layout, icon dimensions, rounded corners, or icon assets.
 - Icons with an opaque background baked into the PNG keep that artwork; CSS cannot make those image pixels transparent.
 - Does not override the `community` or `milk` themes, and does not patch JS.
+- The Command Palette styling also applies when opened with Ctrl+K if the
+  current user has selected Dark Glass.
 - No changes to OCA source files or Odoo Enterprise assets are required.
 
 To adjust the colors, edit the three CSS colors in `--app-menu-background`.
 The radial-gradient values are `#123745`, `#1a142f`, and `#03050d`.
 
 ## Troubleshooting
+
+- When upgrading an existing installation, rebuild/deploy the addon and
+  upgrade the Odoo module to register the additional backend SCSS asset.
+- The Command Palette theme requires a modern browser with CSS `:has()`
+  support and the OCA apps menu mounted in the navigation bar.
 
 - If Dark Glass is absent from the theme dropdown, update the Apps List and
   verify the addon is installed in the same database as `web_responsive`.
