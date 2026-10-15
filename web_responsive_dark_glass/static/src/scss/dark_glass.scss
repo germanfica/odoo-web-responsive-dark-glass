@@ -22,25 +22,9 @@
         background-position: center;
     }
 
-    // Style the existing OCA app tiles without changing their layout or icons.
+    // Apply glass styling only to icons, preserving the OCA tile layout.
     .o-app-menu-item {
-        background-color: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-
-        &:hover,
-        &:focus-visible {
-            // OCA uses --app-menu-hover-background with !important on hover.
-            border-color: rgba(255, 255, 255, 0.30);
-            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.24);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-
         &__icon {
-            // OCA normally uses an opaque white background behind icons.
             // Keep the original 64px icon, padding, and rounded-3 corners.
             background-color: rgba(255, 255, 255, 0.13);
             border: 1px solid rgba(255, 255, 255, 0.30);
