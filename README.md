@@ -36,7 +36,7 @@ via Odoo's `ondelete` fallback.
   `.o_grid_apps_menu[data-theme="dark_glass"]`.
 - Uses `/web_responsive/static/src/img/home-menu-bg-overlay.svg` from the
   **installed** `web_responsive` addon, so the SVG is not redistributed.
-- Gives app tiles and icon backgrounds a translucent glass appearance without changing their dimensions, rounded corners, or icon assets.
+- Gives app icon backgrounds the same translucent glass surface as the menu search bar, without changing tile layout, icon dimensions, rounded corners, or icon assets.
 - Icons with an opaque background baked into the PNG keep that artwork; CSS cannot make those image pixels transparent.
 - Does not override the `community` or `milk` themes, and does not patch JS.
 - No changes to OCA source files or Odoo Enterprise assets are required.

@@ -26,19 +26,18 @@
     .o-app-menu-item {
         &__icon {
             // Keep the original 64px icon, padding, and rounded-3 corners.
-            background-color: rgba(255, 255, 255, 0.13);
-            border: 1px solid rgba(255, 255, 255, 0.30);
-            box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.24),
-                0 4px 18px rgba(0, 0, 0, 0.20);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            // Match the existing Dark Glass search input surface.
+            background-color: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
 
         &:hover .o-app-menu-item__icon,
         &:focus-visible .o-app-menu-item__icon {
-            background-color: rgba(255, 255, 255, 0.20);
-            border-color: rgba(255, 255, 255, 0.42);
+            background-color: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.22);
         }
 
         &__active {
