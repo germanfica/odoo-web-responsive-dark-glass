@@ -1,0 +1,88 @@
+/* Copyright 2026 Contributors
+ * License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
+ *
+ * An additive theme for OCA web_responsive (Odoo 18).
+ * Reuses the existing app menu, template, icon styles, preference dialog,
+ * and SVG URL: nothing from the OCA module is copied into this addon.
+ */
+
+.o_grid_apps_menu[data-theme="dark_glass"] {
+    --app-menu-background: url("/web_responsive/static/src/img/home-menu-bg-overlay.svg"),
+        radial-gradient(ellipse at 20% 0%, #123745 0%, transparent 65%),
+        radial-gradient(ellipse at 85% 45%, #1a142f 0%, transparent 70%),
+        #03050d;
+    --app-menu-text-color: #f5f7fc;
+    --app-menu-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+    --app-menu-hover-background: rgba(255, 255, 255, 0.13);
+    --apps-menu-scrollbar-background: rgba(210, 225, 245, 0.5);
+    --apps-menu-empty-search-color: #f5f7fc;
+
+    .app-menu-container {
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .o-app-menu-item {
+        border: 1px solid transparent;
+
+        &:hover,
+        &:focus-visible {
+            border-color: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        &__icon {
+            background: rgba(255, 255, 255, 0.87);
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        &__active {
+            color: #d4e6ff;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+        }
+    }
+
+    .search-container {
+        .search-input {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            .search-icon,
+            .form-control {
+                color: #f5f7fc;
+            }
+
+            .form-control::placeholder {
+                color: rgba(245, 247, 252, 0.7);
+                opacity: 1;
+            }
+        }
+
+        .search-item {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            &__name {
+                color: #f5f7fc;
+                text-shadow: none;
+            }
+
+            &:hover,
+            &.highlight {
+                background: rgba(255, 255, 255, 0.20);
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+            }
+        }
+    }
+}
