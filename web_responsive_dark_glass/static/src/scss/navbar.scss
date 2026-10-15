@@ -8,7 +8,8 @@
 
 body.o_apps_menu_opened {
     .o_main_navbar:has(.o_grid_apps_menu[data-theme="dark_glass"]) {
-        background-color: rgba(13, 22, 36, 0.82);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+        background-color: transparent;
+        border-bottom-color: transparent;
+        border-bottom: 0;
     }
 }
