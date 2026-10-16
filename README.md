@@ -7,6 +7,10 @@ It extends the existing Odoo `res.users.apps_menu_theme` selection and adds
 three theme-specific SCSS assets. The OCA menu, preference modal, search
 components, icons, and SVG are **reused**, not copied or replaced.
 
+<img width="1920" height="1080" alt="Screenshot from 2026-10-15 21-45-11" src="https://github.com/user-attachments/assets/7823e1f8-bf1f-4103-8b4c-51c263bd6584" />
+
+<img width="1920" height="1080" alt="Screenshot from 2026-10-15 21-45-05" src="https://github.com/user-attachments/assets/3a75d791-7215-4aff-a2c6-11f7280128fb" />
+
 ## Requirements
 
 - Odoo Community 18.0
