@@ -2,14 +2,26 @@
  * License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0.html).
  *
  * Dark Glass styling for Odoo 18's main navigation bar.
- * Apply only while the OCA apps menu is open. Avoid backdrop-filter on
- * the navbar: it changes the containing block for the fixed apps menu.
+ * Extend the apps menu background behind the transparent navbar.
+ * Avoid backdrop-filter on the navbar to preserve fixed positioning.
  */
 
 body.o_apps_menu_opened {
     .o_main_navbar:has(.o_grid_apps_menu[data-theme="dark_glass"]) {
-        background-color: transparent;
-        border-bottom-color: transparent;
-        border-bottom: 0;
+        background: transparent;
+        border: 0;
+
+        .app-menu-container {
+            top: 0;
+            height: 100dvh;
+            max-height: 100dvh;
+            padding-top: calc(var(--o-navbar-height) + 1rem);
+        }
+
+        .o_grid_apps_menu__button,
+        .o_menu_systray {
+            position: relative;
+            z-index: 1001;
+        }
     }
 }
