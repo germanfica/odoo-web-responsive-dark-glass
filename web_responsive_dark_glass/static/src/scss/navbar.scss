@@ -7,7 +7,7 @@
  */
 
 body.o_apps_menu_opened {
-    .o_main_navbar:has(.o_grid_apps_menu[data-theme="dark_glass"]) {
+    .o_main_navbar:has(.o_navbar_apps_menu .o_grid_apps_menu[data-theme="dark_glass"]) {
         background: transparent;
         border: 0;
 
