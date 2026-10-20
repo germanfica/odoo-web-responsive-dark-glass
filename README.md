@@ -1,7 +1,7 @@
-# Web Responsive - Dark Glass Theme (Odoo 18)
+# Web Responsive - Dark Glass Theme (Odoo 19)
 
 Optional **Dark Glass** theme for the application menu provided by
-[OCA/web_responsive 18.0](https://github.com/OCA/web/tree/18.0/web_responsive).
+[OCA/web_responsive 19.0](https://github.com/OCA/web/tree/19.0/web_responsive).
 
 It extends the existing Odoo `res.users.apps_menu_theme` selection and adds
 three theme-specific SCSS assets. The OCA menu, preference modal, search
@@ -13,8 +13,8 @@ components, icons, and SVG are **reused**, not copied or replaced.
 
 ## Requirements
 
-- Odoo Community 18.0
-- OCA `web_responsive` (18.0) installed
+- Odoo Community 19.0
+- OCA `web_responsive` (19.0) installed
 
 ## Install
 
@@ -87,4 +87,4 @@ extension points and references the SVG already supplied by OCA's module;
 no files from OCA are included in this ZIP. The upstream addon is licensed
 LGPL-3.0 and contains third-party copyright notices.
 
-Upstream: https://github.com/OCA/web/tree/18.0/web_responsive
+Upstream: https://github.com/OCA/web/tree/19.0/web_responsive
